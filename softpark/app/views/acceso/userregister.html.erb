@@ -1,0 +1,82 @@
+<div class="panel panel-success">
+  <div class="panel-body">
+      Registro Usuario
+  </div>
+  
+  <div style="    padding-top: 15px;padding-left: 20%;margin: auto;padding-right: 20%;">
+     <table class="table_register">
+         <tr>
+             <td>
+                <div class="input-group">
+                 <span class="input-group-addon" id="basic-addon1">Nombre          : </span>
+                 <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                 </div>
+             </td>
+             <td style="width:20px;"></td>
+             <td>
+                 <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">Apellido       : </span>
+                  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                 </div>
+             </td>
+         </tr>
+         <tr>
+             <td>
+                <div class="input-group">
+                 <span class="input-group-addon" id="basic-addon1">Correo          : </span>
+                 <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                 </div>
+             </td>
+             <td style="width:20px;"></td>
+             <td></td>
+         </tr>
+         <tr>
+             <td>
+                <div class="input-group">
+                 <span class="input-group-addon" id="basic-addon1">Contraseña       : </span>
+                 <input type="password" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                 </div>
+             </td>
+             <td style="width:20px;"></td>
+             <td>
+                <div class="input-group">
+                 <span class="input-group-addon" id="basic-addon1">Repita Contraseña : </span>
+                 <input type="password" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                 </div>
+             </td>
+         </tr>
+         <tr>
+             <td>
+                <div class="input-group">
+                 <span class="input-group-addon" id="basic-addon1">Direcci&oacute;n  : </span>
+                 <input type="password" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                 </div>
+             </td>
+             <td style="width:20px;"></td>
+             <td>
+                <div class="input-group">
+                 <span class="input-group-addon" id="basic-addon1">Tel&eacute;fono   : </span>
+                 <input type="password" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                 </div>
+             </td>
+         </tr>
+         <tr>
+             <td>
+                <div class="input-group">
+                 <span class="input-group-addon" id="basic-addon1">Fecha Nacimiento: </span>
+                 <input type="date" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                 </div>
+             </td>
+             <td style="width:20px;"></td>
+             <td></td>
+         </tr>
+         
+     </table>
+   
+     
+     <div class="jumbotron">
+         <%= link_to "Registarse", pages_index_path , :class => "btn btn-primary btn-lg"%>
+         <%= link_to "Validar", pages_index_path, :class => "btn btn-primary btn-lg"%>
+     </div>
+  </div>
+</div>
