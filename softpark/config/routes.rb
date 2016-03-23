@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  get 'trasaction/list'
+
+  get 'trasaction/histori'
+
+  get 'trasaction/favorite'
+
+  get 'trasaction/detail'
+
+  get 'trasaction/paiment'
+
+  get 'trasaction/confirmation'
+
+  get 'acceso/login'
+
+  get 'acceso/userregister'
+
   get 'pages/index'
 
   get 'pages/information'
