@@ -48,3 +48,6 @@ group :development do
   gem 'spring'
 end
 
+# Manage Email form
+gem 'mail_form'
+gem 'simple_form'
