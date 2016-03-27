@@ -26,14 +26,16 @@ Rails.application.routes.draw do
   get 'pages/contac'
   
   root 'pages#index'
-
+  
+  # Revisar lo que subio Walter, hay doble root
+  #root 'home#index'
+  
+  get 'contact' => 'home#contacto'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
-  
-  get 'contact' => 'home#contacto'
   
   #match 'contacts', to: 'contacts#new', via: 'get'
   #resource "contacts", only: [:new, :create]
