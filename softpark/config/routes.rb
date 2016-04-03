@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'offert/create'
+
+  get 'offert/list'
+
+  get 'offert/reservation'
+  
+  get 'offert/confirmation'
+
   get 'trasaction/list'
 
   get 'trasaction/histori'
