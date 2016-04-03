@@ -51,7 +51,30 @@
           <ul class="nav navbar-nav">
            <%= render 'layouts/head' %>
           </ul>
+          
+             <ul class="nav navbar-nav">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          Usuario<b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li><%= link_to "Registrar Ofertas", offert_create_path   %></li>
+          <li><%= link_to "Reservas Realizadas",offert_reservation_path   %></li>
+          <li><%= link_to "Ofertar creadas",offert_list_path   %></li>
+          <li class="divider"></li>
+          <li><%= link_to "Historial", trasaction_histori_path  %></li>
+          <li><%= link_to "Favoritos", trasaction_favorite_path  %></li>
+
+        </ul>
+      </li>
+    </ul>
         </div>
+        
+        
+
+   
+   
+        
       </div>
     </div>
 
