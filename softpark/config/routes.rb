@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :profiles, only: [:edit, :update , :new]
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  devise_for :users
   get 'offert/create'
 
   get 'offert/list'
