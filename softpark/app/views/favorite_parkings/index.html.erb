@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Favorite Parkings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fec favorite</th>
+      <th>Name space</th>
+      <th>User</th>
+      <th>Rent parking</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @favorite_parkings.each do |favorite_parking| %>
+      <tr>
+        <td><%= favorite_parking.fec_favorite %></td>
+        <td><%= favorite_parking.name_space %></td>
+        <td><%= favorite_parking.user %></td>
+        <td><%= favorite_parking.rent_parking %></td>
+        <td><%= link_to 'Show', favorite_parking %></td>
+        <td><%= link_to 'Edit', edit_favorite_parking_path(favorite_parking) %></td>
+        <td><%= link_to 'Destroy', favorite_parking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Favorite parking', new_favorite_parking_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Type Parkings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>State</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @type_parkings.each do |type_parking| %>
+      <tr>
+        <td><%= type_parking.description %></td>
+        <td><%= type_parking.state %></td>
+        <td><%= link_to 'Show', type_parking %></td>
+        <td><%= link_to 'Edit', edit_type_parking_path(type_parking) %></td>
+        <td><%= link_to 'Destroy', type_parking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Type parking', new_type_parking_path %>

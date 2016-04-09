@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :feedbacks
+  resources :favorite_parkings
+  resources :reserve_parkings
+  resources :rent_parkings
+  resources :locations
+  resources :type_parkings
   resources :profiles, only: [:edit, :update , :new]
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users

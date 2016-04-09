@@ -1,0 +1,2 @@
+module FavoriteParkingsHelper
+end

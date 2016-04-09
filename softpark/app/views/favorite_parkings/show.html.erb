@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fec favorite:</strong>
+  <%= @favorite_parking.fec_favorite %>
+</p>
+
+<p>
+  <strong>Name space:</strong>
+  <%= @favorite_parking.name_space %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @favorite_parking.user %>
+</p>
+
+<p>
+  <strong>Rent parking:</strong>
+  <%= @favorite_parking.rent_parking %>
+</p>
+
+<%= link_to 'Edit', edit_favorite_parking_path(@favorite_parking) %> |
+<%= link_to 'Back', favorite_parkings_path %>

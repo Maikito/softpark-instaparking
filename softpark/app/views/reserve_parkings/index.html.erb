@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Reserve Parkings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fec reserve</th>
+      <th>Fec ini reserve</th>
+      <th>Fec fin reserv</th>
+      <th>Hor ini reserve</th>
+      <th>Hor fin reserve</th>
+      <th>Mont reserve</th>
+      <th>Cod pay</th>
+      <th>State</th>
+      <th>Int</th>
+      <th>User</th>
+      <th>Rent parking</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reserve_parkings.each do |reserve_parking| %>
+      <tr>
+        <td><%= reserve_parking.fec_reserve %></td>
+        <td><%= reserve_parking.fec_ini_reserve %></td>
+        <td><%= reserve_parking.fec_fin_reserv %></td>
+        <td><%= reserve_parking.hor_ini_reserve %></td>
+        <td><%= reserve_parking.hor_fin_reserve %></td>
+        <td><%= reserve_parking.mont_reserve %></td>
+        <td><%= reserve_parking.cod_Pay %></td>
+        <td><%= reserve_parking.state %></td>
+        <td><%= reserve_parking.int %></td>
+        <td><%= reserve_parking.user %></td>
+        <td><%= reserve_parking.rent_parking %></td>
+        <td><%= link_to 'Show', reserve_parking %></td>
+        <td><%= link_to 'Edit', edit_reserve_parking_path(reserve_parking) %></td>
+        <td><%= link_to 'Destroy', reserve_parking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reserve parking', new_reserve_parking_path %>
