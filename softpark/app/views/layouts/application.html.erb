@@ -50,31 +50,44 @@
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
            <%= render 'layouts/head' %>
-          </ul>
+           
+          <% if current_user %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Usuario<b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Registrar Ofertas", offert_create_path   %></li>
+              <li><%= link_to "Reservas Realizadas",offert_reservation_path   %></li>
+              <li><%= link_to "Ofertar creadas",offert_list_path   %></li>
+              <li class="divider"></li>
+              <li><%= link_to "Historial", trasaction_histori_path  %></li>
+              <li><%= link_to "Favoritos", trasaction_favorite_path  %></li>
+            </ul>
+          </li>
+          <% end %>
           
-             <ul class="nav navbar-nav">
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          Usuario<b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-          <li><%= link_to "Registrar Ofertas", offert_create_path   %></li>
-          <li><%= link_to "Reservas Realizadas",offert_reservation_path   %></li>
-          <li><%= link_to "Ofertar creadas",offert_list_path   %></li>
-          <li class="divider"></li>
-          <li><%= link_to "Historial", trasaction_histori_path  %></li>
-          <li><%= link_to "Favoritos", trasaction_favorite_path  %></li>
-
-        </ul>
-      </li>
-    </ul>
+           <% if current_user %>
+           <li>
+           <%= link_to  "Editar", edit_profile_path(current_user.default_profile), class: "navbar-link" %>
+           </li>
+           
+           <% if current_user.role=='operator' %>
+           <li>
+             <%= link_to  "Intranet", rails_admin_path, class: "navbar-link" %>
+           </li>
+           <% end %>
+           
+           <li>
+           <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "navbar-link" %>
+           </li>
+           <% else %>
+           <li>
+           <%= link_to "Sign in", new_user_session_path, class: "navbar-link" %>
+          <% end %>
+          
+          </ul>
         </div>
-        
-        
-
-   
-   
-        
       </div>
     </div>
 
