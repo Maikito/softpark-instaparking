@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   layout 'internal', except: [:index]
   def index
+    @locations = Location.all
   end
 
   def information

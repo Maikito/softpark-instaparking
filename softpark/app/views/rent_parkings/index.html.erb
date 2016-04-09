@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Rent Parkings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Addres</th>
+      <th>Phone</th>
+      <th>User</th>
+      <th>Location</th>
+      <th>Type parking</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rent_parkings.each do |rent_parking| %>
+      <tr>
+        <td><%= rent_parking.title %></td>
+        <td><%= rent_parking.description %></td>
+        <td><%= rent_parking.price %></td>
+        <td><%= rent_parking.addres %></td>
+        <td><%= rent_parking.phone %></td>
+        <td><%=  rent_parking.user %></td>
+        <td><%=  rent_parking.location %></td>
+        <td><%= rent_parking.type_parking %></td>
+        <td><%= link_to 'Show', rent_parking %></td>
+        <td><%= link_to 'Edit', edit_rent_parking_path(rent_parking) %></td>
+        <td><%= link_to 'Destroy', rent_parking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rent parking', new_rent_parking_path %>

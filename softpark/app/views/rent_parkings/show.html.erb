@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @rent_parking.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @rent_parking.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @rent_parking.price %>
+</p>
+
+<p>
+  <strong>Addres:</strong>
+  <%= @rent_parking.addres %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @rent_parking.phone %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @rent_parking.user %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @rent_parking.location %>
+</p>
+
+<p>
+  <strong>Type parking:</strong>
+  <%= @rent_parking.type_parking %>
+</p>
+
+<%= link_to 'Edit', edit_rent_parking_path(@rent_parking) %> |
+<%= link_to 'Back', rent_parkings_path %>

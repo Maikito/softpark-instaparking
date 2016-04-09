@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  desDistrict: MyString
+  state: MyString
+
+two:
+  desDistrict: MyString
+  state: MyString
