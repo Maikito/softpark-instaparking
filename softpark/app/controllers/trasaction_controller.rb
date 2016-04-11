@@ -1,7 +1,14 @@
 class TrasactionController < ApplicationController
+  
+  
   def list
+    # @locations = Location.all
+   # @rent_parkings=  RentParking.joins(:locations).where('locations.id' => params[:id])
+     
+     @rent_parkings=  RentParking.where("location_id = ? " , params[:id])
   end
 
+  
   def histori
   end
 
@@ -9,6 +16,7 @@ class TrasactionController < ApplicationController
   end
 
   def detail
+    @rent_parking=  RentParking.find(params[:idparking])
   end
 
   def paiment
@@ -16,4 +24,6 @@ class TrasactionController < ApplicationController
 
   def confirmation
   end
+  
+  
 end

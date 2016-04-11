@@ -7,8 +7,13 @@ Rails.application.routes.draw do
   resources :reserve_parkings
   resources :rent_parkings
   resources :locations
+  
   resources :type_parkings
   resources :profiles, only: [:edit, :update , :new]
+
+  get      'trasaction/:id/list', controller: :trasaction, action: :list, as: :list
+  get      'trasaction/:idparking/detail', controller: :trasaction, action: :detail, as: :detail
+  
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   get 'offert/create'

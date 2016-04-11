@@ -1,4 +1,7 @@
 <div style="    padding-top: 50px;padding-left: 7%;padding-right: 20%;">
+
+<% if @rent_parking %>
+
 <div class="media" >
   <div class="media-left media-middle" style="width: 18%;display: inline-block;">
     <a href="#">
@@ -6,9 +9,9 @@
     </a>
   </div>
   <div class="media-body" style="display: inline-block;width: 80%;">
-    <h2 class="media-heading">Car Park on Bloomsbury Square</h2>
-    <h2 class="media-heading">Jiron ucayali 2358 , Lima , Peru </h2>
-    <h2 class="media-heading">Precio : S/.10  por Hora </h2>
+    <h2 class="media-heading"><%= @rent_parking.title %> </h2>
+    <h2 class="media-heading"><%= @rent_parking.addres %> </h2>
+    <h2 class="media-heading">Precio : S/. <%= @rent_parking.price %>    por Hora </h2>
     <div class="jumbotron" style="padding:0px;margin:0px;">
          <%= link_to "Alquilar",trasaction_paiment_path , :class => "btn btn-primary btn-lg"%>
          <%= link_to "Agregar Favorito", trasaction_favorite_path  , :class => "btn btn-primary btn-lg"%>
@@ -73,6 +76,8 @@
       </textbox>
   </div>
 </div>
+
+<% end %>
 </div>
 
 
