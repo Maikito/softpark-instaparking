@@ -1,7 +1,61 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+# Delete existing Type_parkings 
+
+TypeParking.delete_all
+Location.delete_all
+
+
+ 
+
+TypeParking.create(description: 'Estacionamiento en la calle', state: 'A')
+TypeParking.create(description: 'Estacionamiento en aeropuerto', state: 'A')
+TypeParking.create(description: 'Estacionamiento en puerto', state: 'A')
+TypeParking.create(description: 'Estacionamiento vale Parking', state: 'A')
+TypeParking.create(description: 'Estacionamiento rotacional', state: 'A')
+TypeParking.create(description: 'Estacionamiento en vias interUrbanas', state: 'A')
+TypeParking.create(description: 'Estacionamiento robatizado', state: 'A')
+
+Location.create(desDistrict:  'LIMA', state: 'A')
+Location.create(desDistrict:  'ANCON', state: 'A')
+Location.create(desDistrict:  'ATE', state: 'A')
+Location.create(desDistrict:  'BARRANCO', state: 'A')
+Location.create(desDistrict:  'BREÑA', state: 'A')
+Location.create(desDistrict:  'CARABAYLLO', state: 'A')
+Location.create(desDistrict:  'CHACLACAYO', state: 'A')
+Location.create(desDistrict:  'CHORRILLOS', state: 'A')
+Location.create(desDistrict:  'CIENEGUILLA', state: 'A')
+Location.create(desDistrict:  'COMAS', state: 'A')
+Location.create(desDistrict:  'EL AGUSTINO', state: 'A')
+Location.create(desDistrict:  'INDEPENDENCIA', state: 'A')
+Location.create(desDistrict:  'JESUS MARIA', state: 'A')
+Location.create(desDistrict:  'LA MOLINA', state: 'A')
+Location.create(desDistrict:  'LA VICTORIA', state: 'A')
+Location.create(desDistrict:  'LINCE', state: 'A')
+Location.create(desDistrict:  'LOS OLIVOS', state: 'A')
+Location.create(desDistrict:  'LURIGANCHO', state: 'A')
+Location.create(desDistrict:  'LURIN', state: 'A')
+Location.create(desDistrict:  'MAGDALENA DEL MAR', state: 'A')
+Location.create(desDistrict:  'MAGDALENA VIEJA', state: 'A')
+Location.create(desDistrict:  'MIRAFLORES', state: 'A')
+Location.create(desDistrict:  'PACHACAMAC', state: 'A')
+Location.create(desDistrict:  'PUCUSANA', state: 'A')
+Location.create(desDistrict:  'PUENTE PIEDRA', state: 'A')
+Location.create(desDistrict:  'PUNTA HERMOSA', state: 'A')
+Location.create(desDistrict:  'PUNTA NEGRA', state: 'A')
+Location.create(desDistrict:  'RIMAC', state: 'A')
+Location.create(desDistrict:  'SAN BARTOLO', state: 'A')
+Location.create(desDistrict:  'SAN BORJA', state: 'A')
+Location.create(desDistrict:  'SAN ISIDRO', state: 'A')
+Location.create(desDistrict:  'SAN JUAN DE LURIGANCHO', state: 'A')
+Location.create(desDistrict:  'SAN JUAN DE MIRAFLORES', state: 'A')
+Location.create(desDistrict:  'SAN LUIS', state: 'A')
+Location.create(desDistrict:  'SAN MARTIN DE PORRES', state: 'A')
+Location.create(desDistrict:  'SAN MIGUEL', state: 'A')
+Location.create(desDistrict:  'SANTA ANITA', state: 'A')
+Location.create(desDistrict:  'SANTA MARIA DEL MAR', state: 'A')
+Location.create(desDistrict:  'SANTA ROSA', state: 'A')
+Location.create(desDistrict:  'SANTIAGO DE SURCO', state: 'A')
+Location.create(desDistrict:  'SURQUILLO', state: 'A')
+Location.create(desDistrict:  'VILLA EL SALVADOR', state: 'A')
+Location.create(desDistrict:  'VILLA MARIA DEL TRIUNFO', state: 'A')
