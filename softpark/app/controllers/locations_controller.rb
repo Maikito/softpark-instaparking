@@ -1,5 +1,11 @@
 class LocationsController < ApplicationController
-  before_action :set_location, only: [:show, :edit, :update, :destroy]
+  before_action :set_location, only: [:show, :edit, :update, :destroy, :ulrlocation]
+
+
+  def list
+     @locations=Location.all
+     @locations = Location.where("id = ?", params[:id])
+  end
 
   # GET /locations
   # GET /locations.json
@@ -71,4 +77,6 @@ class LocationsController < ApplicationController
     def location_params
       params.require(:location).permit(:desDistrict, :state)
     end
+    
+    
 end

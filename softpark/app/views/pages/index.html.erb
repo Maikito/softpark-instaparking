@@ -8,11 +8,21 @@
 
 <div class="dropdown" >
   
-  <select class="btn btn-info dropdown-toggle" onchange="listar(this)">
-   <%= options_from_collection_for_select(@locations,'id','desDistrict')   %>
-  <select>
+  
    
-
+    <select onchange="listar(this);">
+         <% @locations.each do |location| %>
+        <option value="<%= location.id %>"><%= location.desDistrict %></option>
+        <% end %>
+    </select>
+    
 </div>
 </div>
 </div>
+<script>
+    function listar(id){
+        var idx=id.value;
+       window.location.href="../trasaction/"+idx+"/list";
+    }
+    
+</script>
