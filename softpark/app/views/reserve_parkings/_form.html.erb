@@ -1,17 +1,18 @@
-<%= simple_form_for(@reserve_parking) do |f| %>
+
+<%= simple_form_for(@reserve_parking) do |f| %> 
+<!--%= form_for([@reserve_parking] , :html => { :class => "form-horizontal", :multipart => true}) do |f| %-->
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :fec_reserve %>
+    
     <%= f.input :fec_ini_reserve %>
     <%= f.input :fec_fin_reserv %>
     <%= f.input :hor_ini_reserve %>
     <%= f.input :hor_fin_reserve %>
     <%= f.input :mont_reserve %>
     <%= f.input :cod_Pay %>
-    <%= f.input :state %>
-    <%= f.input :int %>
-    <%= f.association :user %>
+    <%= f.input :rent_parking_id %>
+ 
     <%= f.association :rent_parking %>
   </div>
 

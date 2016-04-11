@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Id Rent:</strong>
+  <%= @rent_parking.id %>
+</p>
+
+<p>
   <strong>Title:</strong>
   <%= @rent_parking.title %>
 </p>
@@ -25,20 +30,7 @@
   <%= @rent_parking.phone %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @rent_parking.user %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @rent_parking.location %>
-</p>
-
-<p>
-  <strong>Type parking:</strong>
-  <%= @rent_parking.type_parking %>
-</p>
+  
 
 <%= link_to 'Edit', edit_rent_parking_path(@rent_parking) %> |
 <%= link_to 'Back', rent_parkings_path %>
