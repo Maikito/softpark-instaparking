@@ -1,4 +1,5 @@
 class RentParkingsController < ApplicationController
+  
   before_action :set_rent_parking, only: [:show, :edit, :update, :destroy]
 
   # GET /rent_parkings

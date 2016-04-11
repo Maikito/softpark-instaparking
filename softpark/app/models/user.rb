@@ -5,6 +5,17 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_one :profile
   
+  has_many :rent_parkings
+  
+  has_many :reserve_parkings 
+  has_many :rent_parkings, through: :reserve_parkings
+  
+  has_many :feedbacks 
+  has_many :reserve_parkings, through: :feedbacks
+  
+  has_many :favorite_parkings 
+  has_many :rent_parkings, through: :favorite_parkings
+  
   enum role: [:user, :operator]
   
   after_initialize :set_default_role

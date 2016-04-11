@@ -15,4 +15,5 @@ class PagesController < ApplicationController
 
   def contac
   end
+  
 end
